@@ -8,7 +8,6 @@
   var spans;
   var typed;
   var seconds = 60;
-  var spark = new Audio("http://k003.kiwi6.com/hotlink/qdpr7bioht/spark.mp3");
 
   function countdown() {
     points = 0;
@@ -297,10 +296,10 @@
     function typing(e) {
         typed = String.fromCharCode(e.which);
         for (var i = 0; i < spans.length; i++) {
-          if (spans[i].innerHTML === typed) { // if typed letter is the one from the word
-            if (spans[i].classList.contains("bg")) { // if it already has class with the bacground color then check the next one
+          if (spans[i].innerHTML === typed) {
+            if (spans[i].classList.contains("bg")) {  next one
               continue;
-            } else if (spans[i].classList.contains("bg") === false && spans[i-1] === undefined || spans[i-1].classList.contains("bg") !== false ) { // if it dont have class, if it is not first letter or if the letter before it dont have class (this is done to avoid marking the letters who are not in order for being checked, for example if you have two "A"s so to avoid marking both of them if the first one is at the index 0 and second at index 5 for example)
+            } else if (spans[i].classList.contains("bg") === false && spans[i-1] === undefined || spans[i-1].classList.contains("bg") !== false ) {
               spans[i].classList.add("bg");
               break;
             }
