@@ -6,7 +6,7 @@
   * Have fun :) 
 * Check out a branch for your feature and let us all know what you're going to add to this wonderful repo by adding to this readme!
 
-### Robbie - 29 December 2016
+#### Robbie - 29 December 2016
 * Typing game feature
 
 
