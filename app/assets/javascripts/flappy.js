@@ -1,5 +1,9 @@
-function flappy(){
+// function flappy(){
     // Create our 'main' state that will contain the game
+
+
+
+
 	var mainState = {
 	    preload: function() { 
 	        game.load.image('rob', 'assets/rob.png'); 
@@ -19,7 +23,17 @@ function flappy(){
 	    update: function() {
 	        if (this.rob.y < 0 || this.rob.y > 490)
                this.restartGame();
-	    },
+           },
+           
+           jump: function() {
+             this.rob.body.velocity.y = -350;
+           },
+           
+           restartGame: function() {
+               game.state.start('main');
+	       }
+	       
+	    
 	};
 
 	// Initialize Phaser, and create a 400px by 490px game
@@ -30,4 +44,4 @@ function flappy(){
 
 	// Start the state to actually start the game
 	game.state.start('main');
-}
+// }

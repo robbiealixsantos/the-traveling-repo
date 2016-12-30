@@ -1,4 +1,4 @@
-class flappyController < ApplicationController
+class FlappyController < ApplicationController
   def index
   end
 end
