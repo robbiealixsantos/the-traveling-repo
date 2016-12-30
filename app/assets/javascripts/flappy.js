@@ -8,8 +8,9 @@ function flappy(){
 	    create: function() { 
 	        game.stage.backgroundColor = '#71c5cf';
 	        game.physics.startSystem(Phaser.Physics.ARCADE);
-	        this.bird = game.add.sprite(100, 245, 'rob');
+	        this.rob = game.add.sprite(100, 245, 'rob');
 	        game.physics.arcade.enable(this.rob);
+	        this.rob.body.gravity.y = 1000;
 	    },
 
 	    update: function() {
