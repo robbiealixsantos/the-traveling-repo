@@ -17,8 +17,8 @@ function flappy(){
 	    },
 
 	    update: function() {
-	        // This function is called 60 times per second    
-	        // It contains the game's logic   
+	        if (this.rob.y < 0 || this.rob.y > 490)
+               this.restartGame();
 	    },
 	};
 
