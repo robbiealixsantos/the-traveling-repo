@@ -11,6 +11,9 @@ function flappy(){
 	        this.rob = game.add.sprite(100, 245, 'rob');
 	        game.physics.arcade.enable(this.rob);
 	        this.rob.body.gravity.y = 1000;
+	        var spaceKey = game.input.keyboard.addKey(
+                    Phaser.Keyboard.SPACEBAR);
+            spaceKey.onDown.add(this.jump, this);    
 	    },
 
 	    update: function() {
