@@ -6,7 +6,8 @@
 
 	var mainState = {
 	    preload: function() { 
-	        game.load.image('rob', 'assets/rob.png'); 
+	        game.load.image('rob', 'images/flappy/rob.png'); 
+	        game.load.image('pipe', 'images/flappy/pipe.png');
 	    },
 
 	    create: function() { 
