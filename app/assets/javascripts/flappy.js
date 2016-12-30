@@ -8,6 +8,7 @@
 	    preload: function() { 
 	        game.load.image('rob', 'images/flappy/rob.png'); 
 	        game.load.image('pipe', 'images/flappy/pipe.png');
+	        game.load.audio('jump', 'images/flappy/jump.wav');
 	    },
 
 	    create: function() { 
@@ -25,6 +26,8 @@
 	       this.score = 0;
            this.labelScore = game.add.text(20, 20, "0", 
               { font: "30px Arial", fill: "#ffffff" });   
+           this.rob.anchor.setTo(-0.2, 0.5); 
+           this.jumpSound = game.add.audio('jump'); 
 
 	      },
 
@@ -65,17 +68,35 @@
 	        if (this.rob.y < 0 || this.rob.y > 490)
                this.restartGame();
              game.physics.arcade.overlap(
-    		this.rob, this.pipes, this.restartGame, null, this);    
+    		this.rob, this.pipes, this.hitPipe, null, this);    
+             if (this.rob.angle < 20)
+              this.rob.angle += 1; 
            },
            
            jump: function() {
+           	  if (this.rob.alive == false)
+                return;
+                this.jumpSound.play();   
              this.rob.body.velocity.y = -350;
+             game.add.tween(this.rob).to({angle: -20}, 100).start(); 
            },
            
            restartGame: function() {
                game.state.start('main');
-	       }
+	       },
 	       
+	       hitPipe: function() {
+    		if (this.rob.alive == false)
+        	return;
+
+    		 this.rob.alive = false;
+
+    		 game.time.events.remove(this.timer);
+  
+       		 this.pipes.forEach(function(p){
+        	 p.body.velocity.x = 0;
+    		 }, this);
+		   }, 
 	    
 	};
 
