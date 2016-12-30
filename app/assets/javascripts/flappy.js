@@ -77,7 +77,7 @@
            	  if (this.rob.alive == false)
                 return;
                 this.jumpSound.play();   
-             this.rob.body.velocity.y = -350;
+             this.rob.body.velocity.y = -300;
              game.add.tween(this.rob).to({angle: -20}, 100).start(); 
            },
            
@@ -101,7 +101,7 @@
 	};
 
 	// Initialize Phaser, and create a 400px by 490px game
-	var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.auto, "flappy");
+	var game = new Phaser.Game(400, 490, Phaser.auto, "flappy");
 
 	// Add the 'mainState' and call it 'main'
 	game.state.add('main', mainState); 
