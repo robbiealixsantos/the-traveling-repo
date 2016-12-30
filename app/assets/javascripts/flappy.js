@@ -9,6 +9,7 @@
 	        game.load.image('rob', 'images/flappy/rob.png'); 
 	        game.load.image('pipe', 'images/flappy/pipe.png');
 	        game.load.audio('jump', 'images/flappy/jump.wav');
+	        game.load.audio('boing', 'images/flappy/cartoon008.wav');
 	    },
 
 	    create: function() { 
@@ -28,7 +29,8 @@
               { font: "30px Arial", fill: "#ffffff" });   
            this.rob.anchor.setTo(-0.2, 0.5); 
            this.jumpSound = game.add.audio('jump'); 
-
+           this.collisonSound = game.add.audio("boing")
+  
 	      },
 
 	       addOnePipe: function(x, y) {
@@ -88,7 +90,8 @@
 	       hitPipe: function() {
     		if (this.rob.alive == false)
         	return;
-
+             this.collisonSound.play(); 
+              
     		 this.rob.alive = false;
 
     		 game.time.events.remove(this.timer);
@@ -101,7 +104,7 @@
 	};
 
 	// Initialize Phaser, and create a 400px by 490px game
-	var game = new Phaser.Game(400, 490, Phaser.auto, "flappy");
+	var game = new Phaser.Game(window.innerWidth, 490, Phaser.auto, "flappy");
 
 	// Add the 'mainState' and call it 'main'
 	game.state.add('main', mainState); 
