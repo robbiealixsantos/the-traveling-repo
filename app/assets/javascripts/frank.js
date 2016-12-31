@@ -1,3 +1,5 @@
+var frankPage = function(){
+
 var introFace = function() {
     $('.intro').addClass('animated bounceInLeft');
    setTimeout(function(){
@@ -14,3 +16,4 @@ var introFace = function() {
 
 introFace();
 flappy();
+};

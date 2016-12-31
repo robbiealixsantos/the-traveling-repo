@@ -1,15 +1,17 @@
 $( document ).on('turbolinks:load', function(){
+
   $(function(){
-    if($('body').is('.typing')){
+    if($('container').is('#typing')){
       typingGame();
     }
   });
 
   $(function(){
-    if($('div').is('#flappy')){
+    if($('body').is('.frank-body')){
       frankPage();
     }
   });
+
 });
 
 
