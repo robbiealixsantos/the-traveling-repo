@@ -1,7 +1,7 @@
 $( document ).on('turbolinks:load', function(){
 
   $(function(){
-    if($('container').is('#typing')){
+    if($('body').is('.typing')){
       typingGame();
     }
   });
