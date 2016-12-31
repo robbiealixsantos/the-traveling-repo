@@ -1,7 +1,8 @@
-body{
+#flappy-body {
 	background-color: #71c5cf;
 }
-#flappy{
+
+#flappy {
 	background-color: #71c5cf;
   margin:auto;
 }

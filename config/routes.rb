@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get '/typing' => 'typing#index'
-  get '/flappy' => 'flappy#index'
+  get '/frank' => 'frank#index'
+
   root 'welcome#index'
 end
