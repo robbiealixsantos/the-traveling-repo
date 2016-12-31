@@ -1,24 +1,12 @@
-# README
+# the-traveling-repo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* A low stakes-high fun way of keeping in touch after our time at DBC
+* You can add, change, and do anything you want to this project! The only rules are:
+  * You break it, you fix it!
+  * Have fun :) 
+* Check out a branch for your feature and let us all know what you're going to add to this wonderful repo by adding to this readme!
 
-Things you may want to cover:
+#### Robbie - 29 December 2016
+* Typing game feature
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
