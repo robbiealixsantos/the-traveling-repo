@@ -56,9 +56,9 @@ function flappy(){
 
 		    // Add the 6 pipes
 		    // With one big hole at position 'hole' and 'hole + 1'
-		    for (var i = 0; i < 8; i++)
+		    for (var i = 0; i < winH; i++)
 		    	if (i != hole && i != hole + 1)
-		    		this.addOnePipe(400, i * 60 + 10);
+		    		this.addOnePipe(winW, i * 60 + 10);
 		    },
 
 
@@ -99,9 +99,12 @@ function flappy(){
 
 	};
 
+   winW = document.body.offsetWidth;
+   
+   winH = document.body.offsetHeight;     
 	// Initialize Phaser, and create a 400px by 490px game
   // var game = new Phaser.Game(window.innerWidth, 490, Phaser.auto, "flappy");
-  var game = new Phaser.Game(400, 490);
+  var game = new Phaser.Game(winW, winH, Phaser.CANVAS);
 
 	// Add the 'mainState' and call it 'main'
 	game.state.add('main', mainState);

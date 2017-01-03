@@ -29,6 +29,8 @@
     }, 1000);
     }
 
+
+
     function random() {
       words.innerHTML = "";
       var random = Math.floor(Math.random() * (1943 - 0 + 1)) + 0;
@@ -287,7 +289,17 @@
   'YEAR','YELLOW','YES','YESTERDAY','YET','YOU','YOUNG','YOUNGER',
   'YOUR','YOURSELF','YOUTH','ZERO','ZOO'];
 
-    button.addEventListener("click", function(e){
+    $('.wrapper').find('button').on('click', function(e){
+       // console.log("clicked");
+      // progressbar.js initializer
+      $('#line-container').show();
+       var line = new ProgressBar.Line('#line-container', {
+        color: '#ED6A5A',
+        duration: 60000
+       });
+      line.set(1);
+      line.animate(0,0);
+      
       countdown();
       random();
       button.disabled = true;
@@ -316,7 +328,11 @@
             spark.currentTime = 0;
             spark.play();
             words.classList.add("animated");
+            $(".words").css("color", "green");
             words.classList.add("fadeOut");
+            setTimeout(function(){
+              $(".words").css("color", "black");
+            },500);
             points++; // increment the points
             scoreDiv.innerHTML = points; //add points to the points div
             document.removeEventListener("keydown", typing, false);
@@ -329,6 +345,8 @@
 
         }
     }
+
+
 
     document.addEventListener("keydown", typing, false);
 };
