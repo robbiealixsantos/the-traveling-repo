@@ -289,11 +289,12 @@
   'YEAR','YELLOW','YES','YESTERDAY','YET','YOU','YOUNG','YOUNGER',
   'YOUR','YOURSELF','YOUTH','ZERO','ZOO'];
 
-    $(".wrapper").find("button").on("click", function(e){
+    $('.wrapper').find('button').on('click', function(e){
        // console.log("clicked");
       // progressbar.js initializer
+      $('#line-container').show();
        var line = new ProgressBar.Line('#line-container', {
-        color: '#FCB03C',
+        color: '#ED6A5A',
         duration: 60000
        });
       line.set(1);
