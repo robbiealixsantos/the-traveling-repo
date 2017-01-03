@@ -1,8 +1,8 @@
-/*.frank-body {
-	background-color: red;
+.frank-body {
+	background-color: rgba(87, 82, 87, 1);
 	color: white;
 }
-*/
+
 .intro {
 	margin-left: 30%;
 }
