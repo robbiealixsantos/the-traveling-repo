@@ -1,21 +1,17 @@
-/*.wrapper {
-  background-color: orange;
+.wrapper {
+	width: 800px;
+	margin:  auto;
 }
-.outerWrap {
-  background-color: pink;
-}*/
 
-/*.timeWrap {
-  background-color: purple;
+#myProgress {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background-color: grey;
 }
-*/
-/*.wordsWrap{
-	background-color:blue;
-
-}*/
-/*.wordsWrap .words{
-    
-  -webkit-animation-duration: 3s;
-
+#myBar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: green;
 }
-*/

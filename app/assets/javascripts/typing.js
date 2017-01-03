@@ -29,6 +29,8 @@
     }, 1000);
     }
 
+
+
     function random() {
       words.innerHTML = "";
       var random = Math.floor(Math.random() * (1943 - 0 + 1)) + 0;
@@ -288,7 +290,15 @@
   'YOUR','YOURSELF','YOUTH','ZERO','ZOO'];
 
     $(".wrapper").find("button").on("click", function(e){
-       console.log("clicked");
+       // console.log("clicked");
+      // progressbar.js initializer
+       var line = new ProgressBar.Line('#line-container', {
+        color: '#FCB03C',
+        duration: 60000
+       });
+      line.set(1);
+      line.animate(0,0);
+      
       countdown();
       random();
       button.disabled = true;
@@ -334,6 +344,8 @@
 
         }
     }
+
+
 
     document.addEventListener("keydown", typing, false);
 };
