@@ -99,9 +99,12 @@ function flappy(){
 
 	};
 
+   winW = document.body.offsetWidth;
+   
+   winH = document.body.offsetHeight;     
 	// Initialize Phaser, and create a 400px by 490px game
   // var game = new Phaser.Game(window.innerWidth, 490, Phaser.auto, "flappy");
-  var game = new Phaser.Game(400, 490);
+  var game = new Phaser.Game(winW, winH, Phaser.CANVAS);
 
 	// Add the 'mainState' and call it 'main'
 	game.state.add('main', mainState);
