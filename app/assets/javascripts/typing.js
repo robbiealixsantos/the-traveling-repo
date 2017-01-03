@@ -287,7 +287,8 @@
   'YEAR','YELLOW','YES','YESTERDAY','YET','YOU','YOUNG','YOUNGER',
   'YOUR','YOURSELF','YOUTH','ZERO','ZOO'];
 
-    button.addEventListener("click", function(e){
+    $(".wrapper").find("button").on("click", function(e){
+       console.log("clicked");
       countdown();
       random();
       button.disabled = true;
