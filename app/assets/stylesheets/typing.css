@@ -13,7 +13,9 @@
 	background-color:blue;
 
 }*/
-/*.words{
-    background-color:green;
+/*.wordsWrap .words{
+    
+  -webkit-animation-duration: 3s;
 
-}*/
+}
+*/

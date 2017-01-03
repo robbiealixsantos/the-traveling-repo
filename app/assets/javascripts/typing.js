@@ -317,7 +317,11 @@
             spark.currentTime = 0;
             spark.play();
             words.classList.add("animated");
+            $(".words").css("color", "green");
             words.classList.add("fadeOut");
+            setTimeout(function(){
+              $(".words").css("color", "black");
+            },500);
             points++; // increment the points
             scoreDiv.innerHTML = points; //add points to the points div
             document.removeEventListener("keydown", typing, false);
